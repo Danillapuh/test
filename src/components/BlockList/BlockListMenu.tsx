@@ -59,8 +59,8 @@ export const BlockListMenu = () => {
       >
         Неверный hex
       </div>
-      <div style={{ display: "flex", gap: "15px" }}>
-        <div className="menu">
+      <div style={{ display: "flex", gap: "15px", flexWrap: 'wrap' }}>
+        <div className="menu" style={{width: '100%'}}>
           <input
             data-error="sdf"
             onChange={handleInput}
@@ -68,6 +68,7 @@ export const BlockListMenu = () => {
             placeholder="Введите HEX"
           />
           <Button
+          style={{width: '100%'}}
             disabled={hex.error}
             className="button"
             onClick={(e) => addBlock(hex.value)}
@@ -76,7 +77,7 @@ export const BlockListMenu = () => {
           </Button>
         </div>
         <Button
-          style={{ background: btnColors[sort] }}
+          style={{ background: btnColors[sort], width: '100%' }}
           className="button"
           onClick={setSort}
         >
